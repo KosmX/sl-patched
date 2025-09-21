@@ -1,5 +1,5 @@
 CC = gcc
-LDFLAGS = -lncurses -ltermcap
+LDFLAGS = -lncurses
 
 all: sl
 

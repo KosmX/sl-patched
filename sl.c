@@ -139,7 +139,7 @@ int dirc(int y, int x)
 int main(int argc, char *argv[])
 {
   int x, i, j, k, p, ONEDIREC, len;
-  int (*sl_func)();
+  int (*sl_func)(int, char**);
   time_t t;
   char num[10];
   unsigned short int s;
@@ -226,7 +226,7 @@ if (LOGO == 0) {
   sl_func = add_sl;
 }
 for (x = COLS - 1 ; ; --x) {
-  if ((*sl_func)(x, c) == ERR) break;
+  if ((*sl_func)(x, *c) == ERR) break;
   if (FLY != 1) {
    if (add_cross(p) == ERR) break;
  }
